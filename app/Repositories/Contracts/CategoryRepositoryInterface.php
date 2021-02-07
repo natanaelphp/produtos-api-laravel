@@ -6,6 +6,6 @@ use App\Models\Category;
 
 interface CategoryRepositoryInterface
 {
-    public function __construct(Category $categoryModel);
+    public function __construct(Category $model);
     public function getAll();
 }

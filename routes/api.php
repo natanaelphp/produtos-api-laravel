@@ -12,3 +12,5 @@
 */
 
 $router->get('categories', 'CategoryController@index');
+
+$router->apiResource('products', ProductController::class);
