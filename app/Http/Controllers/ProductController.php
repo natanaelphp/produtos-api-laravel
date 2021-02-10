@@ -43,6 +43,10 @@ class ProductController extends Controller
 
     public function destroy($id)
     {
-        return $this->productRepository->delete($id);
+        $deleted = $this->productRepository->delete($id);
+
+        $statusCode = $deleted ? 200 : 204;
+
+        return response()->json(null, $statusCode);
     }
 }
